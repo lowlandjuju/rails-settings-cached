@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "request_store"
+require 'hash_dot'
 
 module RailsSettings
   class Base < ActiveRecord::Base
@@ -11,7 +12,10 @@ module RailsSettings
 
     # get the value field, YAML decoded
     def value
-      YAML.load(self[:value]) if self[:value].present?
+      if self[:value].present?
+        result = YAML.load(self[:value])
+        result.is_a?(Hash) ? result.to_dot : result
+      end
     end
 
     # set the value field, YAML encoded
