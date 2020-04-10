@@ -3,7 +3,7 @@ AllCops:
   TargetRubyVersion: 2.6
   Exclude:
     - 'vendor/**/*'
-    - 'lib/generators/settings/templates/*'
+    - 'lib/generators/rails_settings_cached/templates/*'
 
 # Prefer &&/|| over and/or.
 Style/AndOr:
