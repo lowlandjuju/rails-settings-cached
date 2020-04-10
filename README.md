@@ -26,19 +26,19 @@ gem "rails-settings-cached", "~> 2.0"
 Generate your settings:
 
 ```bash
-$ rails g settings:install
+$ rails g rails_settings_cached:install
 ```
 
 If you want custom model name:
 
 ```bash
-$ rails g settings:install
+$ rails g rails_settings_cached:install
 ```
 
 Or use a custom name:
 
 ```bash
-$ rails g settings:install SiteConfig
+$ rails g rails_settings_cached:install SiteConfig
 ```
 
 You will get `app/models/setting.rb`
